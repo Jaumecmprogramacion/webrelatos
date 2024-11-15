@@ -1,8 +1,16 @@
 {
-
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.0"}
-    }
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "./server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "destination": "/"
+      }
+    ]
+  }
 { "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
